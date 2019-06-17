@@ -1,0 +1,17 @@
+<%= link_to("<< Back to List", admin_users_path, :class => 'back-link') %>
+
+<div class="subjects delete">
+  <h2>Delete Admin</h2>
+
+  <%= form_for(@admin_user, :method => 'delete') do |a| %>
+
+    <p>Are you sure you want to permanently delete this admin?</p>
+
+    <p class="reference-name"><%= a.object.username %></p>
+
+    <div class="form-buttons">
+      <%= a.submit("Delete Admin") %>
+    </div>
+
+  <% end %>
+</div>

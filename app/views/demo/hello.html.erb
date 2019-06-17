@@ -1,0 +1,9 @@
+<h1>Hello</h1>
+<% @array.each do |a| %>
+    <%= a %><br>
+<% end %>
+
+<%= link_to 'Index', {:action => 'index'} %>
+<p>Params: <%= params[:id] %></p>
+<p>Page: <%= @page %></p>
+<p>Next Page: <%= @page + 1 %></p>

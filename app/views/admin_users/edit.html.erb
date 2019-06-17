@@ -1,0 +1,28 @@
+<%= form_for(@admin_user) do |f| %>
+    <%= error_messages_for(f.object) %>
+    <table summary="Subject form fields">
+      <tr>
+        <th>First Name</th>
+        <td><%= f.text_field(:first_name) %></td>
+      </tr>
+      <tr>
+        <th>Last Name</th>
+        <td><%= f.text_field(:last_name) %></td>
+      </tr>
+      <tr>
+        <th>Username</th>
+        <td><%= f.text_field(:username) %></td>
+      </tr>
+      <tr>
+      <tr>
+        <th>Email</th>
+        <td><%= f.text_field(:email) %></td>
+      </tr>
+        <th>Password</th>
+        <td><%= f.password_field(:password) %></td>
+      </tr>
+    </table>
+    <div class="form-buttons">
+      <%= f.submit("Edit Admin") %>
+    </div>
+<% end %>
